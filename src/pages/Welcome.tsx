@@ -6,11 +6,9 @@ import {
   StyleSheet,
   Text,
   View,
-  useColorScheme,
 } from "react-native";
 import colors from "../styles/colors";
 import wateringImg from "../assets/watering.png";
-import { Button } from "../components/Button";
 
 export function Welcome() {
   return (
@@ -25,8 +23,10 @@ export function Welcome() {
         sempre que precisar.
       </Text>
 
-      <Button title="Avançar" onPress={() => console.log("teste")} />
-      <Button title="Voltar" onPress={() => console.log("teste")} />
+      <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+        <Text style={styles.buttonText}>></Text>
+      </TouchableOpacity>
+
     </SafeAreaView>
   );
 }
@@ -35,14 +35,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
   },
   title: {
     fontSize: 32,
     fontWeight: "bold",
     textAlign: "center",
     color: colors.heading,
-    //marginTop: "10%",
+    marginTop: "5%",
   },
   subtitle: {
     textAlign: "center",
