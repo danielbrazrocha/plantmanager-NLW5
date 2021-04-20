@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, SafeAreaView, StatusBar } from "react-native";
 import AppLoading from "expo-app-loading";
 import { Welcome } from "./src/pages/Welcome";
+import { UserIdentification } from "./src/pages/UserIdentification";
 import {
   useFonts,
   Jost_400Regular,
@@ -13,7 +14,7 @@ export default function App() {
     Jost_400Regular,
     Jost_600SemiBold,
   });
-  
+
   //Segura a splash screen até que as fontes sejam carregadas
   if (!fontLoaded) {
     return <AppLoading />;
@@ -21,7 +22,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Welcome />
+      <UserIdentification />
     </SafeAreaView>
   );
 }
@@ -29,6 +30,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    //width: "100%",
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
