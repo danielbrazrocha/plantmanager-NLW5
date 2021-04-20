@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: colors.heading,
-    marginTop: "10%",
+    //marginTop: "10%",
   },
   subtitle: {
     textAlign: "center",
